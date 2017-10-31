@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void iniciarJogo(View v) {
         Intent abrirPlacar = new Intent(this, PlacarActivity.class);
+        abrirPlacar.putExtra("CASA",etTimeCasa.getText().toString());
+        abrirPlacar.putExtra("VISITANTE",etTimeVisitante.getText().toString());
         startActivity(abrirPlacar);
+
     }
 }

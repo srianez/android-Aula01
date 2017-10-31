@@ -25,15 +25,34 @@ public class PlacarActivity extends AppCompatActivity {
         tvPlacarCasa = (TextView) findViewById(R.id.tvPlacarCasa);
         tvPlacarVisitante = (TextView) findViewById(R.id.etTimeVisitante);
 
+        if(getIntent() != null) {
+            tvTimeCasa.setText(getIntent().getStringExtra("CASA"));
+            tvTimeVisitante.setText(getIntent().getStringExtra("VISITANTE"));
+        }
+
+        if(savedInstanceState != null) {
+          golCasa = savedInstanceState.getInt("GOLCASA");
+          golVisitante = savedInstanceState.getInt("GOLVISITANTE");
+        }
+        tvPlacarCasa.setText(String.valueOf(golCasa));
+        tvPlacarVisitante.setText(String.valueOf(golVisitante));
+
     }
 
     public void  golCasa(View v) {
         golCasa ++;
-        tvPlacarCasa.setText(golCasa);
+        tvPlacarCasa.setText(String.valueOf(golCasa));
     }
 
     public void  golVisitante(View v) {
         golVisitante ++;
-        tvPlacarVisitante.setText(golVisitante);
+        tvPlacarVisitante.setText(String.valueOf(golVisitante));
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("GOLCASA", golCasa);
+        outState.putInt("GOLVISITANTE", golVisitante);
     }
 }
