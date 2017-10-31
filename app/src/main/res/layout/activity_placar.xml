@@ -17,17 +17,51 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Time A"
-            android:layout_weight="0.5"
-            android:gravity="center"/>
+            style="@style/elemento_placar_titulo"
+            tools:text="Tricolor"
+            android:id="@+id/tvTimeCasa" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            tools:text="Time B"
-            android:gravity="center"/>
+            style="@style/elemento_placar_titulo"
+            tools:text="Galinhada"
+            android:id="@+id/tvTimeVisitante" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/elemento_placar_valor"
+            tools:text="0"
+            android:id="@+id/tvPlacarCasa" />
+
+        <TextView
+            style="@style/elemento_placar_valor"
+            tools:text="1"
+            android:id="@+id/tvPlacarVisitante" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/elemento_placar_botao"
+            tools:text="GOL"
+            android:id="@+id/btGolCasa"
+            android:onClick="golCasa" />
+
+        <Button
+            style="@style/elemento_placar_botao"
+            tools:text="GOL"
+            android:id="@+id/btGolVisitante"
+            android:onClick="golVisitante" />
 
     </LinearLayout>
 

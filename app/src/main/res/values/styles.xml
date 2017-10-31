@@ -20,4 +20,14 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="elemento_placar_valor" parent="elemento_placar">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="elemento_placar_botao" parent="elemento_placar">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
